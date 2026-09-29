@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directorio de Contacto - Hospital San Juan de Dios</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0f4c81;
+            --secondary: #0077b6;
+            --bg: #f4f6f9;
+            --card-bg: #ffffff;
+            --text-main: #1d3557;
+            --text-muted: #6c757d;
+            --border: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.5;
+            padding: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .mobile-container {
+            width: 100%;
+            max-width: 440px;
+            background: var(--card-bg);
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            padding: 24px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .hospital-logo-text {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+
+        .hospital-sub {
+            font-size: 0.825rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .profile-card {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 18px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+        }
+
+        .profile-profession {
+            font-size: 0.85rem;
+            color: var(--secondary);
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .profile-name {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 14px;
+            line-height: 1.3;
+        }
+
+        .profile-role {
+            font-size: 0.825rem;
+            color: var(--text-muted);
+            font-weight: 500;
+            margin-bottom: 14px;
+            background: #f1f5f9;
+            padding: 6px 10px;
+            border-radius: 6px;
+            display: inline-block;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 16px;
+            background: #f8fafc;
+            padding: 10px 12px;
+            border-radius: 8px;
+            border: 1px solid #f1f5f9;
+        }
+
+        .contact-row {
+            display: flex;
+            align-items: center;
+            font-size: 0.825rem;
+        }
+
+        .contact-row span.label {
+            width: 75px;
+            color: var(--text-muted);
+            font-weight: 500;
+            flex-shrink: 0;
+        }
+
+        .contact-row a, .contact-row span.value {
+            color: var(--text-main);
+            text-decoration: none;
+            font-weight: 500;
+            word-break: break-all;
+        }
+
+        .contact-row a:hover {
+            color: var(--secondary);
+            text-decoration: underline;
+        }
+
+        .actions {
+            display: flex;
+        }
+
+        .btn {
+            width: 100%;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            padding: 11px 12px;
+            border-radius: 8px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #0b3962;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-top: 16px;
+            padding-top: 12px;
+            border-top: 1px solid var(--border);
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="mobile-container">
+        <div class="header">
+            <div class="hospital-logo-text">Hospital San Juan de Dios</div>
+            <div class="hospital-sub">Servicio de Salud Metropolitano Occidente</div>
+        </div>
+
+        <!-- Perfil 1: Jocelyn Varas -->
+        <div class="profile-card">
+            <div class="profile-profession">Químico Farmacéutica</div>
+            <div class="profile-name">Jocelyn Varas Cornejo</div>
+            <div class="profile-role">Jefa (s) Bodega Abastecimiento - HSJD</div>
+            
+            <div class="contact-info">
+                <div class="contact-row">
+                    <span class="label">Correo:</span>
+                    <a href="mailto:jocelyn.varas@redsalud.gob.cl">jocelyn.varas@redsalud.gob.cl</a>
+                </div>
+                <div class="contact-row">
+                    <span class="label">Teléfono:</span>
+                    <a href="tel:+56226086796">(+56) 2 2608 6796</a>
+                </div>
+                <div class="contact-row">
+                    <span class="label">Anexo:</span>
+                    <a href="tel:286796">286796 (Redminsal)</a>
+                </div>
+            </div>
+
+            <div class="actions">
+                <a href="mailto:jocelyn.varas@redsalud.gob.cl" class="btn btn-primary">✉ Enviar Correo</a>
+            </div>
+        </div>
+
+        <!-- Perfil 2: Mauricio Quiroz -->
+        <div class="profile-card">
+            <div class="profile-profession">Administrador Público</div>
+            <div class="profile-name">Mauricio Quiroz Ayala</div>
+            <div class="profile-role">Encargado Proyecto Automatización HSJD</div>
+            
+            <div class="contact-info">
+                <div class="contact-row">
+                    <span class="label">Correo:</span>
+                    <a href="mailto:mauricio.quiroz@redsalud.gob.cl">mauricio.quiroz@redsalud.gob.cl</a>
+                </div>
+                <div class="contact-row">
+                    <span class="label">Teléfono:</span>
+                    <a href="tel:+56226086799">(+56) 2 2608 6799</a>
+                </div>
+                <div class="contact-row">
+                    <span class="label">Anexo:</span>
+                    <a href="tel:286799">286799 (Redminsal)</a>
+                </div>
+            </div>
+
+            <div class="actions">
+                <a href="mailto:mauricio.quiroz@redsalud.gob.cl" class="btn btn-primary">✉ Enviar Correo</a>
+            </div>
+        </div>
+
+        <div class="footer">
+            Centro de Responsabilidad de Abastecimiento
+        </div>
+    </div>
+
+</body>
+</html>
