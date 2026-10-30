@@ -22,133 +22,124 @@
             padding: 0;
         }
 
+        html, body {
+            height: 100vh;
+            overflow: hidden; /* Evita el scroll vertical global */
+        }
+
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             background-color: var(--bg);
             color: var(--text-main);
-            line-height: 1.4;
-            padding: 15px;
+            line-height: 1.25;
+            padding: 6px;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
         }
 
         .container {
             width: 100%;
-            background: var(--card-bg);
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-            overflow: hidden;
-            padding: 16px;
-        }
-
-        /* Contenedor Vertical (Móvil / Pantalla estándar) */
-        .container.vertical {
             max-width: 420px;
-        }
-
-        /* Contenedor Horizontal (Panorámico / Escritorio / Cartelería) */
-        .container.horizontal {
-            max-width: 900px;
-        }
-        .container.horizontal .profiles-wrapper {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 12px;
+            background: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            padding: 10px 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            max-height: 100vh;
         }
 
         .header {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 12px;
-            padding-bottom: 10px;
+            margin-bottom: 4px;
+            padding-bottom: 4px;
             border-bottom: 1px solid var(--border);
-            gap: 12px;
-        }
-
-        .header-text {
-            text-align: left;
-            flex-grow: 1;
         }
 
         .hospital-logo-text {
-            font-size: 0.95rem;
+            font-size: 0.82rem;
             font-weight: 700;
             color: var(--primary);
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            margin-bottom: 2px;
         }
 
         .hospital-sub {
-            font-size: 0.75rem;
+            font-size: 0.65rem;
             color: var(--text-muted);
             font-weight: 500;
+        }
+
+        .profiles-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
         }
         
         .profile-card {
             background: #ffffff;
             border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 12px;
-            margin-bottom: 10px;
-            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02);
+            border-radius: 8px;
+            padding: 6px 10px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
         }
 
-        .container.horizontal .profile-card {
-            margin-bottom: 0;
-        }
-
         .profile-profession {
-            font-size: 0.75rem;
+            font-size: 0.65rem;
             color: var(--secondary);
             font-weight: 600;
-            margin-bottom: 2px;
         }
 
         .profile-name {
-            font-size: 0.9rem;
+            font-size: 0.78rem;
             font-weight: 700;
             color: var(--text-main);
-            margin-bottom: 4px;
-            line-height: 1.2;
+            margin-bottom: 1px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         .profile-role {
-            font-size: 0.72rem;
+            font-size: 0.62rem;
             color: var(--text-muted);
             font-weight: 500;
-            margin-bottom: 8px;
+            margin-bottom: 4px;
             background: #f1f5f9;
-            padding: 4px 8px;
-            border-radius: 4px;
+            padding: 2px 5px;
+            border-radius: 3px;
             display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 100%;
         }
 
         .contact-info {
             display: flex;
             flex-direction: column;
-            gap: 4px;
-            margin-bottom: 10px;
+            gap: 2px;
+            margin-bottom: 4px;
             background: #f8fafc;
-            padding: 8px 10px;
-            border-radius: 6px;
+            padding: 4px 8px;
+            border-radius: 5px;
             border: 1px solid #f1f5f9;
         }
 
         .contact-row {
             display: flex;
             align-items: center;
-            font-size: 0.75rem;
+            font-size: 0.65rem;
         }
 
         .contact-row span.label {
-            width: 60px;
+            width: 45px;
             color: var(--text-muted);
             font-weight: 500;
             flex-shrink: 0;
@@ -158,7 +149,9 @@
             color: var(--text-main);
             text-decoration: none;
             font-weight: 500;
-            word-break: break-all;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         .contact-row a:hover {
@@ -175,9 +168,9 @@
             display: inline-flex;
             justify-content: center;
             align-items: center;
-            padding: 7px 10px;
-            border-radius: 6px;
-            font-size: 0.78rem;
+            padding: 4px 6px;
+            border-radius: 4px;
+            font-size: 0.68rem;
             font-weight: 600;
             text-decoration: none;
             cursor: pointer;
@@ -196,37 +189,20 @@
 
         .footer {
             text-align: center;
-            font-size: 0.7rem;
+            font-size: 0.62rem;
             color: var(--text-muted);
-            margin-top: 8px;
-            padding-top: 6px;
+            margin-top: 3px;
+            padding-top: 3px;
             border-top: 1px solid var(--border);
             font-weight: 500;
-        }
-
-        /* Ajustes de Impresión */
-        @media print {
-            body {
-                background: white;
-                padding: 0;
-            }
-            .container {
-                box-shadow: none;
-                max-width: 100%;
-                padding: 0;
-            }
-            .btn {
-                display: none;
-            }
         }
     </style>
 </head>
 <body>
 
-    <!-- EJEMPLO DE VERSIÓN VERTICAL (Cambiar clase a 'horizontal' según prefieras) -->
-    <div class="container vertical">
+    <div class="container">
         
-        <!-- Banner Superior c -->
+        <!-- Banner Superior -->
         <div class="header">
             <div class="header-text">
                 <div class="hospital-logo-text">Hospital San Juan de Dios</div>
@@ -235,17 +211,17 @@
         </div>
 
         <div class="profiles-wrapper">
-            <!-- Perfil 1: Karina Gallardo Correa (Arriba) -->
+            <!-- Perfil 1 -->
             <div class="profile-card">
                 <div>
                     <div class="profile-profession">Enfermera</div>
-                    <div class="profile-name">Karina Gallardo Correa</div>
-                    <div class="profile-role">Jefa Bodega Abastecimiento - HSJD</div>
+                    <div class="profile-name" title="Karina Gallardo Correa">Karina Gallardo Correa</div>
+                    <div class="profile-role" title="Jefa Bodega Abastecimiento - HSJD">Jefa Bodega Abastecimiento - HSJD</div>
                     
                     <div class="contact-info">
                         <div class="contact-row">
                             <span class="label">Correo:</span>
-                            <a href="mailto:karina.gallardo.c@redsalud.gob.cl">karina.gallardo.c@redsalud.gob.cl</a>
+                            <a href="mailto:karina.gallardo.c@redsalud.gob.cl" title="karina.gallardo.c@redsalud.gob.cl">karina.gallardo.c@redsalud.gob.cl</a>
                         </div>
                         <div class="contact-row">
                             <span class="label">Teléfono:</span>
@@ -263,17 +239,17 @@
                 </div>
             </div>
 
-            <!-- Perfil 2: Jocelyn Varas Cornejo -->
+            <!-- Perfil 2 -->
             <div class="profile-card">
                 <div>
                     <div class="profile-profession">Químico Farmacéutica</div>
-                    <div class="profile-name">Jocelyn Varas Cornejo</div>
-                    <div class="profile-role">Jefa (s) Bodega Abastecimiento - HSJD</div>
+                    <div class="profile-name" title="Jocelyn Varas Cornejo">Jocelyn Varas Cornejo</div>
+                    <div class="profile-role" title="Jefa (s) Bodega Abastecimiento - HSJD">Jefa (s) Bodega Abastecimiento - HSJD</div>
                     
                     <div class="contact-info">
                         <div class="contact-row">
                             <span class="label">Correo:</span>
-                            <a href="mailto:jocelyn.varas@redsalud.gob.cl">jocelyn.varas@redsalud.gob.cl</a>
+                            <a href="mailto:jocelyn.varas@redsalud.gob.cl" title="jocelyn.varas@redsalud.gob.cl">jocelyn.varas@redsalud.gob.cl</a>
                         </div>
                         <div class="contact-row">
                             <span class="label">Teléfono:</span>
@@ -291,17 +267,17 @@
                 </div>
             </div>
 
-            <!-- Perfil 3: Mauricio Quiroz Ayala -->
+            <!-- Perfil 3 -->
             <div class="profile-card">
                 <div>
                     <div class="profile-profession">Administrador Público</div>
-                    <div class="profile-name">Mauricio Quiroz Ayala</div>
-                    <div class="profile-role">Encargado Proyecto Automatización HSJD</div>
+                    <div class="profile-name" title="Mauricio Quiroz Ayala">Mauricio Quiroz Ayala</div>
+                    <div class="profile-role" title="Encargado Proyecto Automatización HSJD">Encargado Proyecto Automatización HSJD</div>
                     
                     <div class="contact-info">
                         <div class="contact-row">
                             <span class="label">Correo:</span>
-                            <a href="mailto:mauricio.quiroz@redsalud.gob.cl">mauricio.quiroz@redsalud.gob.cl</a>
+                            <a href="mailto:mauricio.quiroz@redsalud.gob.cl" title="mauricio.quiroz@redsalud.gob.cl">mauricio.quiroz@redsalud.gob.cl</a>
                         </div>
                         <div class="contact-row">
                             <span class="label">Teléfono:</span>
